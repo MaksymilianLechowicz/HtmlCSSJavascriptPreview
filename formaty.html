@@ -50,9 +50,9 @@
 		<img src="napisy.png" alt="technologia web">
 	</div>
 	<div id="glowny">
-		<p>Podaj rozmiar tekstu w procentach <input type="number" id="l"> %</p>
+		<p>Podaj rozmiar tekstu w procentach <input type="number" id="percentage"> %</p>
 		<p>
-			<select id="S" name="S">
+			<select id="select" name="select">
 				<option value="prosty">prosty</option>
 				<option value="kursywa">kursywa</option>
 			</select>
@@ -63,7 +63,7 @@
 				<input onclick="green()" id="green" type="submit">
 				<input onclick="blue()" id="blue" type="submit">
 		</p>
-		<p id="p">
+		<p id="paragraphChanged">
 				To jest przykład paragrafu, który może być dowolnie
 				formatowany przez Java Script.
 		</p>
@@ -77,40 +77,41 @@
 	<script type="text/JavaScript">
 	function red()
 	{
-	document.getElementById("p").style.color="red";
-	var L=document.getElementById("l").value
-	document.getElementById("p").style.fontSize=L+"%";
-	var b=document.getElementById("S");
+	document.getElementById("paragraphChanged").style.color="red";
+	var L=document.getElementById("percentage").value
+	document.getElementById("paragraphChanged").style.fontSize=L+"%";
+	var b=document.getElementById("select");
 	var s=b.options[b.selectedIndex].value;
 	if (s=="prosty")
-	document.getElementById("p").style.fontStyle="normal";
+	document.getElementById("paragraphChanged").style.fontStyle="normal";
 	else
-	document.getElementById("p").style.fontStyle="italic";
+	document.getElementById("paragraphChanged").style.fontStyle="italic";
 	}
 	function green()
 	{
-	document.getElementById("p").style.color="green";
-	var L=document.getElementById("l").value
-	document.getElementById("p").style.fontSize=L+"%";
-	var b=document.getElementById("S");
+	document.getElementById("paragraphChanged").style.color="green";
+	var L=document.getElementById("percentage").value
+	document.getElementById("paragraphChanged").style.fontSize=L+"%";
+	var b=document.getElementById("select");
 	var s=b.options[b.selectedIndex].value;
 	if (s=="prosty")
-	document.getElementById("p").style.fontStyle="normal";
+	document.getElementById("paragraphChanged").style.fontStyle="normal";
 	else
-	document.getElementById("p").style.fontStyle="italic";
+	document.getElementById("paragraphChanged").style.fontStyle="italic";
 	}
 	function blue()
 	{
-	document.getElementById("p").style.color="blue";
-	var L=document.getElementById("l").value
-	document.getElementById("p").style.fontSize=L+"%";
-	var b=document.getElementById("S");
+	document.getElementById("paragraphChanged").style.color="blue";
+	var L=document.getElementById("percentage").value
+	document.getElementById("paragraphChanged").style.fontSize=L+"%";
+	var b=document.getElementById("select");
 	var s=b.options[b.selectedIndex].value;
 	if (s=="prosty")
-	document.getElementById("p").style.fontStyle="normal";
+	document.getElementById("paragraphChanged").style.fontStyle="normal";
 	else
-	document.getElementById("p").style.fontStyle="italic";
+	document.getElementById("paragraphChanged").style.fontStyle="italic";
 	}
 	</script> 
 	</body>
+
 </html>
